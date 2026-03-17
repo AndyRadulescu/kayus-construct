@@ -15,7 +15,11 @@
 
 # next.js
 /.next/
+
+.idea/
 /out/
+
+next-env.d.ts
 
 # production
 /build
