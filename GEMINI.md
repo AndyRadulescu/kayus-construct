@@ -10,7 +10,7 @@
 - **Language**: TypeScript (v5+)
 - **Styling**:
   - [Tailwind CSS v4](https://tailwindcss.com/) (using `@tailwindcss/postcss`)
-  - [Sass/SCSS](https://sass-lang.com/) (using `sass` v1.98.0)
+  - [Sass/SCSS](https://sass-lang.com/) (using `sass` v1.98.0) - **ALL styles in this project should be SCSS.**
 - **Fonts**: Geist and Geist Mono via `next/font/google`
 - **Compiler**: React Compiler is enabled (`reactCompiler: true` in `next.config.ts`)
 

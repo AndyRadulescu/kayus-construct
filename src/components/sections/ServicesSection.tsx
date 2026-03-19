@@ -15,7 +15,7 @@ export const ServicesSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SITE_CONTENT.services.map((service, index) => {
-            const IconComponent = (Icons as Record<string, React.ElementType>)[service.icon] || Icons.HelpCircle;
+            const IconComponent = (Icons as any)[service.icon] || Icons.HelpCircle;
             
             return (
               <div 

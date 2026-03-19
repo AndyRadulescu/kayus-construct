@@ -1,8 +1,4 @@
-@use "tailwindcss";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #000000;
@@ -16,7 +12,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-.primary-gradient {
+@utility primary-gradient {
   background: linear-gradient(
                   to right,
                   #A88C65,
@@ -25,7 +21,7 @@
   );
 }
 
-.primary-gradient-text {
+@utility primary-gradient-text {
   @apply primary-gradient bg-clip-text text-transparent;
 }
 
@@ -35,16 +31,14 @@
   }
 }
 
-@layer utilities {
-  .metallic-border {
-    @apply border border-zinc-800/50 bg-zinc-950;
-  }
-  
-  .premium-glow {
-    box-shadow: 0 0 20px rgba(168, 140, 101, 0.15);
-  }
+@utility metallic-border {
+  @apply border border-zinc-800/50 bg-zinc-950;
+}
 
-  .premium-glow-hover:hover {
-    box-shadow: 0 0 30px rgba(168, 140, 101, 0.3);
-  }
+@utility premium-glow {
+  box-shadow: 0 0 20px rgba(168, 140, 101, 0.15);
+}
+
+.premium-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(168, 140, 101, 0.3);
 }
