@@ -7,49 +7,44 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --gold: #d4af37;
-  --gold-hover: #c5a028;
-  --metallic-grey: #2c2c2e;
-  --metallic-dark: #1a1a1c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-gold: var(--gold);
-  --color-gold-hover: var(--gold-hover);
-  --color-metallic-grey: var(--metallic-grey);
-  --color-metallic-dark: var(--metallic-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+.primary-gradient {
+  background: linear-gradient(
+                  to right,
+                  #A88C65,
+                  #FFDA9A,
+                  #C7AD72
+  );
+}
+
+.primary-gradient-text {
+  @apply primary-gradient bg-clip-text text-transparent;
+}
+
 @layer base {
   body {
-    @apply bg-background text-foreground font-sans selection:bg-gold selection:text-black;
+    @apply bg-black text-white font-sans selection:bg-[#A88C65] selection:text-black;
   }
 }
 
 @layer utilities {
   .metallic-border {
-    border: 1px solid transparent;
-    background: linear-gradient(var(--metallic-dark), var(--metallic-dark)) padding-box,
-                linear-gradient(135deg, #4a4a4c, #1a1a1c, #4a4a4c) border-box;
+    @apply border border-zinc-800/50 bg-zinc-950;
+  }
+  
+  .premium-glow {
+    box-shadow: 0 0 20px rgba(168, 140, 101, 0.15);
   }
 
-  .metallic-bg {
-    background: linear-gradient(135deg, #1a1a1c 0%, #2c2c2e 50%, #1a1a1c 100%);
-  }
-
-  .gold-gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold via-[#f5e1a4] to-gold-hover;
-  }
-
-  .gold-glow {
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-  }
-
-  .gold-glow-hover:hover {
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+  .premium-glow-hover:hover {
+    box-shadow: 0 0 30px rgba(168, 140, 101, 0.3);
   }
 }

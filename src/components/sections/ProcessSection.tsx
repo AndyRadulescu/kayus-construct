@@ -19,13 +19,13 @@ export const ProcessSection = () => {
           {SITE_CONTENT.process.map((step, index) => (
             <div key={index} className="relative z-10 group text-center lg:text-left">
               <div className="mb-6 relative inline-block">
-                <div className="h-20 w-20 metallic-bg border border-white/10 rounded-sm flex items-center justify-center text-3xl font-bold text-gold group-hover:gold-glow transition-all duration-500">
+                <div className="h-20 w-20 primary-gradient rounded-sm flex items-center justify-center text-3xl font-bold text-black group-hover:premium-glow transition-all duration-500">
                   {step.step}
                 </div>
                 {/* Connector Dot */}
-                <div className="hidden lg:block absolute top-1/2 -right-6 h-2 w-2 bg-gold rounded-full -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="hidden lg:block absolute top-1/2 -right-6 h-2 w-2 primary-gradient rounded-full -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <h4 className="text-xl font-bold text-white uppercase tracking-wider mb-4 group-hover:text-gold transition-colors">
+              <h4 className="text-xl font-bold text-white uppercase tracking-wider mb-4 group-hover:primary-gradient-text transition-colors">
                 {step.title}
               </h4>
               <p className="text-white/50 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0">

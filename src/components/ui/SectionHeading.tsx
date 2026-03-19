@@ -10,8 +10,8 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle,
   return (
     <div className={`mb-12 ${centered ? 'text-center' : ''}`}>
       <div className={`flex items-center gap-4 mb-4 ${centered ? 'justify-center' : ''}`}>
-        <div className="h-[2px] w-12 bg-gold" />
-        <span className="text-gold tracking-[0.2em] text-xs font-bold uppercase">{subtitle}</span>
+        <div className="h-[2px] w-12 primary-gradient" />
+        <span className="primary-gradient-text tracking-[0.2em] text-xs font-bold uppercase">{subtitle}</span>
       </div>
       <h2 className="text-4xl md:text-5xl font-light tracking-tight text-white leading-tight">
         {title.split(' ').map((word, i) => (

@@ -20,18 +20,18 @@ export const ServicesSection = () => {
             return (
               <div 
                 key={index} 
-                className="group metallic-border p-10 space-y-6 hover:gold-glow-hover transition-all duration-500 cursor-pointer"
+                className="group metallic-border p-10 space-y-6 hover:premium-glow-hover transition-all duration-500 cursor-pointer"
               >
-                <div className="h-14 w-14 bg-white/5 border border-white/10 flex items-center justify-center rounded-sm group-hover:border-gold group-hover:bg-gold/10 transition-all duration-500">
-                  <IconComponent className="text-white group-hover:text-gold transition-colors" size={28} />
+                <div className="h-14 w-14 bg-white/5 border border-white/10 flex items-center justify-center rounded-sm group-hover:border-[#A88C65] group-hover:bg-[#A88C65]/10 transition-all duration-500">
+                  <IconComponent className="text-white group-hover:text-[#FFDA9A] transition-colors" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider group-hover:text-gold transition-colors">
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider group-hover:primary-gradient-text transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-white/50 text-sm leading-relaxed">
                   {service.description}
                 </p>
-                <div className="pt-4 flex items-center gap-2 text-gold text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="pt-4 flex items-center gap-2 primary-gradient-text text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   Detalii Serviciu <Icons.ArrowRight size={14} />
                 </div>
               </div>

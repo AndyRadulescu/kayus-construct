@@ -16,15 +16,15 @@ export const TestimonialsSection = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {SITE_CONTENT.testimonials.map((t, index) => (
             <div key={index} className="metallic-border p-12 space-y-8 relative">
-              <Quote size={40} className="text-gold/20 absolute top-10 right-10" />
+              <Quote size={40} className="text-[#A88C65]/20 absolute top-10 right-10" />
               <p className="text-white/70 italic text-lg leading-relaxed font-light">
                 &ldquo;{t.content}&rdquo;
               </p>
               <div className="flex items-center gap-4">
-                <div className="h-10 w-1 bg-gold" />
+                <div className="h-10 w-1 primary-gradient" />
                 <div>
                   <h4 className="text-white font-bold uppercase tracking-widest text-sm">{t.name}</h4>
-                  <p className="text-gold text-xs uppercase tracking-widest mt-1">{t.role}</p>
+                  <p className="primary-gradient-text text-xs uppercase tracking-widest mt-1 font-bold">{t.role}</p>
                 </div>
               </div>
             </div>

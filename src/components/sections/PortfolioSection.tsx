@@ -45,7 +45,7 @@ export const PortfolioSection = () => {
               </div>
               {/* Overlay Content */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
-                <span className="text-gold text-xs font-bold uppercase tracking-[0.3em] mb-2">{project.category}</span>
+                <span className="primary-gradient-text text-xs font-bold uppercase tracking-[0.3em] mb-2">{project.category}</span>
                 <h3 className="text-2xl font-bold text-white tracking-tight">{project.title}</h3>
               </div>
             </div>

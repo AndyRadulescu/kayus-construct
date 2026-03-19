@@ -22,8 +22,8 @@ export const ContactSection = () => {
 
             <div className="space-y-8">
               <div className="flex items-center gap-6 group">
-                <div className="h-12 w-12 metallic-bg border border-white/10 rounded-sm flex items-center justify-center group-hover:border-gold transition-colors">
-                  <Phone size={20} className="text-gold" />
+                <div className="h-12 w-12 bg-zinc-900 border border-zinc-800 rounded-sm flex items-center justify-center group-hover:border-[#FFDA9A] transition-colors">
+                  <Phone size={20} className="text-[#FFDA9A]" />
                 </div>
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-widest mb-1">Telefon</p>
@@ -32,8 +32,8 @@ export const ContactSection = () => {
               </div>
 
               <div className="flex items-center gap-6 group">
-                <div className="h-12 w-12 metallic-bg border border-white/10 rounded-sm flex items-center justify-center group-hover:border-gold transition-colors">
-                  <Mail size={20} className="text-gold" />
+                <div className="h-12 w-12 bg-zinc-900 border border-zinc-800 rounded-sm flex items-center justify-center group-hover:border-[#FFDA9A] transition-colors">
+                  <Mail size={20} className="text-[#FFDA9A]" />
                 </div>
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-widest mb-1">Email</p>
@@ -42,8 +42,8 @@ export const ContactSection = () => {
               </div>
 
               <div className="flex items-center gap-6 group">
-                <div className="h-12 w-12 metallic-bg border border-white/10 rounded-sm flex items-center justify-center group-hover:border-gold transition-colors">
-                  <MapPin size={20} className="text-gold" />
+                <div className="h-12 w-12 bg-zinc-900 border border-zinc-800 rounded-sm flex items-center justify-center group-hover:border-[#FFDA9A] transition-colors">
+                  <MapPin size={20} className="text-[#FFDA9A]" />
                 </div>
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-widest mb-1">Adresă</p>
@@ -54,7 +54,7 @@ export const ContactSection = () => {
           </div>
 
           {/* Form Side */}
-          <div className="metallic-border p-10 md:p-14 bg-white/5">
+          <div className="metallic-border p-10 md:p-14 bg-zinc-950/50">
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -62,7 +62,7 @@ export const ContactSection = () => {
                   <input 
                     type="text" 
                     placeholder="Ion Popescu" 
-                    className="w-full bg-black/50 border border-white/10 rounded-sm px-4 py-3 text-white focus:border-gold outline-none transition-colors"
+                    className="w-full bg-black border border-zinc-800 rounded-sm px-4 py-3 text-white focus:border-[#FFDA9A] outline-none transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
@@ -70,7 +70,7 @@ export const ContactSection = () => {
                   <input 
                     type="email" 
                     placeholder="ion@exemplu.ro" 
-                    className="w-full bg-black/50 border border-white/10 rounded-sm px-4 py-3 text-white focus:border-gold outline-none transition-colors"
+                    className="w-full bg-black border border-zinc-800 rounded-sm px-4 py-3 text-white focus:border-[#FFDA9A] outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -79,7 +79,7 @@ export const ContactSection = () => {
                 <input 
                   type="text" 
                   placeholder="Construcție Casă Pipera" 
-                  className="w-full bg-black/50 border border-white/10 rounded-sm px-4 py-3 text-white focus:border-gold outline-none transition-colors"
+                  className="w-full bg-black border border-zinc-800 rounded-sm px-4 py-3 text-white focus:border-[#FFDA9A] outline-none transition-colors"
                 />
               </div>
               <div className="space-y-2">
@@ -87,7 +87,7 @@ export const ContactSection = () => {
                 <textarea 
                   rows={4} 
                   placeholder="Descrie scurt proiectul tău..." 
-                  className="w-full bg-black/50 border border-white/10 rounded-sm px-4 py-3 text-white focus:border-gold outline-none transition-colors"
+                  className="w-full bg-black border border-zinc-800 rounded-sm px-4 py-3 text-white focus:border-[#FFDA9A] outline-none transition-colors"
                 />
               </div>
               <Button variant="primary" className="w-full flex items-center justify-center gap-3 py-4">

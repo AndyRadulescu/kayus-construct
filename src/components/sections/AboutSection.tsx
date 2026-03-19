@@ -9,7 +9,7 @@ export const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Image Side */}
           <div className="relative group">
-            <div className="absolute -inset-4 border border-gold/30 rounded-sm translate-x-8 translate-y-8 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-700" />
+            <div className="absolute -inset-4 border border-[#A88C65]/30 rounded-sm translate-x-8 translate-y-8 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-700" />
             <div className="relative z-10 metallic-border overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1590644365607-1c5a519a9a37?q=80&w=2070&auto=format&fit=crop" 
@@ -18,7 +18,7 @@ export const AboutSection = () => {
               />
             </div>
             {/* Trust Badge */}
-            <div className="absolute -bottom-10 -right-10 z-20 bg-gold p-8 rounded-sm gold-glow hidden md:block">
+            <div className="absolute -bottom-10 -right-10 z-20 primary-gradient p-8 rounded-sm premium-glow hidden md:block">
               <span className="text-black font-black text-4xl block leading-none">10+</span>
               <span className="text-black/80 text-xs font-bold uppercase tracking-widest block mt-1">Ani de<br/>Experiență</span>
             </div>
@@ -45,8 +45,8 @@ export const AboutSection = () => {
                 "Execuție monitorizată"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="flex-shrink-0 h-5 w-5 bg-gold/10 flex items-center justify-center rounded-full">
-                    <Check size={12} className="text-gold" />
+                  <div className="flex-shrink-0 h-5 w-5 bg-[#A88C65]/10 flex items-center justify-center rounded-full">
+                    <Check size={12} className="text-[#FFDA9A]" />
                   </div>
                   <span className="text-white/80 text-sm font-medium">{item}</span>
                 </div>

@@ -38,8 +38,8 @@ export const HeroSlider = () => {
       <div className="relative h-full container mx-auto px-6 flex flex-col justify-center">
         <div className="max-w-3xl space-y-8 animate-in fade-in slide-in-from-left-8 duration-1000">
           <div className="flex items-center gap-4">
-            <div className="h-[2px] w-12 bg-gold" />
-            <span className="text-gold tracking-[0.4em] text-xs font-bold uppercase">
+            <div className="h-[2px] w-12 primary-gradient" />
+            <span className="primary-gradient-text tracking-[0.4em] text-xs font-bold uppercase">
               {SITE_CONTENT.companyName}
             </span>
           </div>
@@ -74,7 +74,7 @@ export const HeroSlider = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-[2px] transition-all duration-500 ${
-              index === currentSlide ? 'w-16 bg-gold' : 'w-8 bg-white/20'
+              index === currentSlide ? 'w-16 primary-gradient' : 'w-8 bg-white/20'
             }`}
           />
         ))}

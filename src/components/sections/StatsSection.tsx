@@ -8,7 +8,7 @@ export const StatsSection = () => {
         {SITE_CONTENT.stats.map((stat, index) => (
           <div key={index} className="text-center group">
             <h3 className="text-4xl md:text-6xl font-bold text-white mb-2 transition-transform duration-500 group-hover:scale-110">
-              <span className="gold-gradient-text">{stat.value}</span>
+              <span className="primary-gradient-text">{stat.value}</span>
             </h3>
             <p className="text-white/40 text-xs md:text-sm uppercase tracking-[0.2em] font-medium">
               {stat.label}

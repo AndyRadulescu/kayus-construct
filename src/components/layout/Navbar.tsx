@@ -28,20 +28,20 @@ export const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-4 border-b border-white/10' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex flex-col">
+        <div className="flex flex-col group cursor-pointer">
           <span className="text-2xl font-bold tracking-[0.2em] text-white">KAYUS</span>
-          <span className="text-[10px] tracking-[0.3em] text-gold uppercase -mt-1">Construct</span>
+          <span className="text-[10px] tracking-[0.3em] primary-gradient-text uppercase -mt-1 font-bold">Construct</span>
         </div>
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-12">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="text-sm font-medium tracking-widest text-white/70 hover:text-gold transition-colors uppercase">
+            <a key={link.label} href={link.href} className="text-sm font-medium tracking-widest text-white/70 hover:primary-gradient-text transition-colors uppercase">
               {link.label}
             </a>
           ))}
           <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-sm">
-            <Phone size={14} className="text-gold" />
+            <Phone size={14} className="text-[#A88C65]" />
             <span className="text-sm text-white font-medium">{SITE_CONTENT.contact.phone}</span>
           </div>
         </div>
@@ -56,7 +56,7 @@ export const Navbar = () => {
       <div className={`lg:hidden fixed inset-0 bg-black transition-transform duration-500 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex flex-col items-center justify-center h-full gap-8">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-light tracking-widest text-white uppercase">
+            <a key={link.label} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-light tracking-widest text-white uppercase hover:primary-gradient-text">
               {link.label}
             </a>
           ))}
