@@ -1,12 +1,8 @@
 @use "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -16,8 +12,33 @@
   --font-mono: var(--font-geist-mono);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility primary-gradient {
+  background: linear-gradient(
+                  to right,
+                  #A88C65,
+                  #FFDA9A,
+                  #C7AD72
+  );
+}
+
+@utility primary-gradient-text {
+  @apply primary-gradient bg-clip-text text-black px-2 rounded-md;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans selection:bg-[#A88C65] selection:text-black;
+  }
+}
+
+@utility metallic-border {
+  @apply border border-zinc-800/50 bg-zinc-950;
+}
+
+@utility premium-glow {
+  box-shadow: 0 0 20px rgba(168, 140, 101, 0.15);
+}
+
+.premium-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(168, 140, 101, 0.3);
 }
