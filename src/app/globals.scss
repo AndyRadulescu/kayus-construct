@@ -22,7 +22,7 @@
 }
 
 @utility primary-gradient-text {
-  @apply primary-gradient bg-clip-text text-transparent;
+  @apply primary-gradient bg-clip-text text-black px-2 rounded-md;
 }
 
 @layer base {
