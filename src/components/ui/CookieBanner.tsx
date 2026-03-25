@@ -1,10 +1,12 @@
 'use client';
 
 import React, {useEffect, useState} from 'react';
-import {X} from 'lucide-react';
-import {Button} from './Button';
+import { X } from 'lucide-react';
+import { Button } from './Button';
+import MetallicGlowEffect from './MetallicGlowEffect';
 
 const CookieBanner: React.FC = () => {
+
     const [isVisible, setIsVisible] = useState(false);
     const [hasAccepted, setHasAccepted] = useState<boolean | null>(null);
 
@@ -48,22 +50,7 @@ const CookieBanner: React.FC = () => {
                     className="border border-zinc-800
                      bg-zinc-950/80 backdrop-blur-md premium-glow rounded-lg overflow-hidden group">
                     <div className="w-full flex justify-center relative">
-                        <div
-                            aria-hidden="true"
-                            className="pointer-events-none absolute top-0 left-1/2 h-px w-[300px] max-w-full -translate-x-1/2 -translate-y-1/2"
-                            style={{
-                                background:
-                                    'linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.0) 0%, rgba(143, 143, 143, 0.67) 50%, rgba(0, 0, 0, 0) 100%)',
-                            }}
-                        />
-                        <div
-                            aria-hidden="true"
-                            className="pointer-events-none absolute left-1/2 -top-1 h-[200px] w-full max-w-[200px] -translate-x-1/2 -translate-y-1/2 md:max-w-[400px]"
-                            style={{
-                                background: `conic-gradient(from 90deg at 50% 50%, #00000000 50%, #000 50%), 
-                     radial-gradient(rgba(200, 200, 200, 0.1) 0%, transparent 80%)`,
-                            }}
-                        />
+                        <MetallicGlowEffect />
                     </div>
 
                     <div className="p-6 md:p-8">
