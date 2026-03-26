@@ -19,8 +19,8 @@ export const AboutSection = () => {
             </div>
             {/* Trust Badge */}
             <div className="absolute -bottom-10 -right-10 z-20 primary-gradient p-8 rounded-sm premium-glow hidden md:block">
-              <span className="text-black font-black text-4xl block leading-none">10+</span>
-              <span className="text-black/80 text-xs font-bold uppercase tracking-widest block mt-1">Ani de<br/>Experiență</span>
+              <span className="text-black font-black text-4xl block leading-none">100%</span>
+              <span className="text-black/80 text-xs font-bold uppercase tracking-widest block mt-1">Clienți<br/>Mulțumiți</span>
             </div>
           </div>
 

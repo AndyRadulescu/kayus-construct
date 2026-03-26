@@ -8,9 +8,28 @@ import { ArrowRight } from 'lucide-react';
 
 export const HeroSlider = () => {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-black flex items-center">
-      {/* Background Subtle Gradient */}
-      <div className="absolute inset-0" />
+    <section className="relative min-h-screen w-full overflow-hidden bg-black flex items-center pt-32 pb-12 lg:pt-0 lg:pb-0">
+      {/* Background Construction Image - Blended */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute right-0 bottom-0 w-full h-1/2 lg:h-full lg:w-1/2 opacity-50">
+          <Image 
+            src="/construction-background.jpeg" 
+            alt="Construction background" 
+            fill
+            className="object-cover grayscale brightness-50"
+            priority
+          />
+          {/* Gradient to hide the "beginning" of the image (Left edge on desktop, Top edge on mobile) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent hidden lg:block" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-transparent lg:hidden" />
+          
+          {/* Additional subtle darkening to ensure text readability */}
+          <div className="absolute inset-0 bg-black/20" />
+        </div>
+      </div>
+
+      {/* Decorative side element */}
+      <div className="absolute right-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden lg:block z-10" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
@@ -35,7 +54,7 @@ export const HeroSlider = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 pt-4">
-              <Button variant="primary" className="flex items-center gap-3">
+              <Button variant="primary" className="flex items-center justify-center gap-3">
                 {SITE_CONTENT.hero.cta}
                 <ArrowRight size={18} />
               </Button>
@@ -45,26 +64,10 @@ export const HeroSlider = () => {
             </div>
           </div>
 
-          {/* Right Content - Logo */}
-          <div className="w-full lg:w-2/5 flex justify-center lg:justify-end animate-in fade-in zoom-in duration-1000 delay-300">
-            <div className="relative group">
-              <div className="relative">
-                <Image 
-                  src="/logo.jpeg" 
-                  alt="Kayus Construct Logo" 
-                  width={600} 
-                  height={600}
-                  className="w-full max-w-[300px] md:max-w-[400px] lg:max-w-none h-auto rounded-sm"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
+          {/* Right Space - Kept empty to show the background image */}
+          <div className="w-full lg:w-2/5" />
         </div>
       </div>
-
-      {/* Decorative side element */}
-      <div className="absolute right-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden lg:block" />
     </section>
   );
 };
