@@ -12,7 +12,7 @@ export const AboutSection = () => {
             <div className="absolute -inset-4 border border-[#A88C65]/30 rounded-sm translate-x-8 translate-y-8 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-700" />
             <div className="relative z-10 metallic-border overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1590644365607-1c5a519a9a37?q=80&w=2070&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop"
                 alt="Şantier profesional" 
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
               />
