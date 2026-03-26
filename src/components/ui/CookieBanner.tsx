@@ -1,8 +1,8 @@
 'use client';
 
 import React, {useEffect, useState} from 'react';
-import { X } from 'lucide-react';
-import { Button } from './Button';
+import {X} from 'lucide-react';
+import {Button} from './Button';
 import MetallicGlowEffect from './MetallicGlowEffect';
 
 const CookieBanner: React.FC = () => {
@@ -49,9 +49,7 @@ const CookieBanner: React.FC = () => {
                 <div
                     className="border border-zinc-800
                      bg-zinc-950/80 backdrop-blur-md premium-glow rounded-lg overflow-hidden group">
-                    <div className="w-full flex justify-center relative">
-                        <MetallicGlowEffect />
-                    </div>
+                    <MetallicGlowEffect/>
 
                     <div className="p-6 md:p-8">
                         <button
