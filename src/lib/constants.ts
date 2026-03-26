@@ -2,13 +2,9 @@ export const SITE_CONTENT = {
   companyName: "KAYUS CONSTRUCT",
   slogan: "Firma solida de construcții - Calitate fara compromis.",
   contact: {
-    email: "contact@kayusconstruct.ro",
+    email: "office@kayus.ro",
     phone: "+40 (0761) 702 391",
     address: "București, România",
-    legal: {
-      cui: "RO12345678",
-      regCom: "J40/000/2026",
-    }
   },
   hero: {
     title: "Construim Viitorul cu Precizie și Integritate",

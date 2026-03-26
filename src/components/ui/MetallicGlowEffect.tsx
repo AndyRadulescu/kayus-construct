@@ -8,7 +8,7 @@ const MetallicGlowEffect: React.FC = () => {
                 className="pointer-events-none absolute top-0 left-1/2 h-px w-[300px] max-w-full -translate-x-1/2 -translate-y-1/2"
                 style={{
                     background:
-                        'linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(168, 140, 101, 0) 0%, rgba(255, 218, 154, 0.8) 50%, rgba(0, 0, 0, 0) 100%)',
+                        'linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(168, 140, 101, 0) 0%, rgba(255, 218, 154, 0.4) 50%, rgba(0, 0, 0, 0) 100%)',
                 }}
             />
             <div

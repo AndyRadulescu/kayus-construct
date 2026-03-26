@@ -52,49 +52,6 @@ export const ContactSection = () => {
               </div>
             </div>
           </div>
-
-          {/* Form Side */}
-          <div className="metallic-border p-10 md:p-14 bg-zinc-950/50">
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest text-white/40 font-bold">Nume Complet</label>
-                  <input 
-                    type="text" 
-                    placeholder="Ion Popescu" 
-                    className="w-full bg-black border border-zinc-800 rounded-sm px-4 py-3 text-white focus:border-[#FFDA9A] outline-none transition-colors"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest text-white/40 font-bold">Email</label>
-                  <input 
-                    type="email" 
-                    placeholder="ion@exemplu.ro" 
-                    className="w-full bg-black border border-zinc-800 rounded-sm px-4 py-3 text-white focus:border-[#FFDA9A] outline-none transition-colors"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest text-white/40 font-bold">Subiect Proiect</label>
-                <input 
-                  type="text" 
-                  placeholder="Construcție Casă Pipera" 
-                  className="w-full bg-black border border-zinc-800 rounded-sm px-4 py-3 text-white focus:border-[#FFDA9A] outline-none transition-colors"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest text-white/40 font-bold">Mesaj / Detalii</label>
-                <textarea 
-                  rows={4} 
-                  placeholder="Descrie scurt proiectul tău..." 
-                  className="w-full bg-black border border-zinc-800 rounded-sm px-4 py-3 text-white focus:border-[#FFDA9A] outline-none transition-colors"
-                />
-              </div>
-              <Button variant="primary" className="w-full flex items-center justify-center gap-3 py-4">
-                Trimite Solicitarea <Send size={18} />
-              </Button>
-            </form>
-          </div>
         </div>
       </div>
     </section>
