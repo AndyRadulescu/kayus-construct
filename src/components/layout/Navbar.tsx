@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { SITE_CONTENT } from '@app/lib/constants';
 import { Menu, X, Phone } from 'lucide-react';
+import { handleScrollToSection } from '@app/lib/utils/scroll';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,10 @@ export const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-4 border-b border-white/10' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex flex-col group cursor-pointer">
+        <div 
+          className="flex flex-col group cursor-pointer" 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
           <span className="text-2xl font-bold tracking-[0.2em] text-white">KAYUS</span>
           <span className="text-[10px] tracking-[0.3em] primary-gradient-text uppercase -mt-1 font-bold">Construct</span>
         </div>
@@ -36,7 +40,12 @@ export const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-12">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="text-sm font-medium tracking-widest text-white/70 hover:primary-gradient-text transition-colors uppercase">
+            <a 
+              key={link.label} 
+              href={link.href} 
+              onClick={(e) => handleScrollToSection(e, link.href, { onComplete: () => setIsMobileMenuOpen(false) })}
+              className="text-sm font-medium tracking-widest text-white/70 hover:primary-gradient-text transition-colors uppercase"
+            >
               {link.label}
             </a>
           ))}
@@ -56,7 +65,12 @@ export const Navbar = () => {
       <div className={`lg:hidden fixed inset-0 bg-black transition-transform duration-500 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex flex-col items-center justify-center h-full gap-8">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-light tracking-widest text-white uppercase hover:primary-gradient-text">
+            <a 
+              key={link.label} 
+              href={link.href} 
+              onClick={(e) => handleScrollToSection(e, link.href, { onComplete: () => setIsMobileMenuOpen(false) })}
+              className="text-2xl font-light tracking-widest text-white uppercase hover:primary-gradient-text"
+            >
               {link.label}
             </a>
           ))}
