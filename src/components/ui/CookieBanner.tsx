@@ -6,24 +6,25 @@ import {Button} from './Button';
 import MetallicGlowEffect from './MetallicGlowEffect';
 
 const CookieBanner: React.FC = () => {
-
+    const [isMounted, setIsMounted] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const [hasAccepted, setHasAccepted] = useState<boolean | null>(null);
+    const [hasAccepted, setHasAccepted] = useState(false);
 
     useEffect(() => {
-        const checkAccepted = () => {
+        const timerId = setTimeout(() => {
+            setIsMounted(true);
+            
             const accepted = localStorage.getItem('kayus-cookie-accepted');
             if (accepted === 'true') {
                 setHasAccepted(true);
             } else {
-                const timer = setTimeout(() => {
+                const bannerTimer = setTimeout(() => {
                     setIsVisible(true);
                 }, 1000);
-                return () => clearTimeout(timer);
+                return () => clearTimeout(bannerTimer);
             }
-        };
-
-        const timerId = setTimeout(checkAccepted, 0);
+        }, 0);
+        
         return () => clearTimeout(timerId);
     }, []);
 
@@ -37,7 +38,7 @@ const CookieBanner: React.FC = () => {
         setIsVisible(false);
     };
 
-    if (hasAccepted) return null;
+    if (!isMounted || hasAccepted) return null;
 
     return (
         <div
