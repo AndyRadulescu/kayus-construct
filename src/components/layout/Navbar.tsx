@@ -61,10 +61,13 @@ export const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-sm">
+            <a 
+              href={`tel:${SITE_CONTENT.contact.phone.replace(/[^0-9+]/g, '')}`}
+              className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-sm hover:bg-white/10 transition-colors"
+            >
               <Phone size={14} className="text-[#A88C65]" />
               <span className="text-sm text-white font-medium">{SITE_CONTENT.contact.phone}</span>
-            </div>
+            </a>
           </div>
 
           {/* Mobile Toggle */}
@@ -112,10 +115,13 @@ export const Navbar = () => {
             </a>
           ))}
           
-          <div className="mt-8 flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-full">
+          <a 
+            href={`tel:${SITE_CONTENT.contact.phone.replace(/[^0-9+]/g, '')}`}
+            className="mt-8 flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors"
+          >
             <Phone size={18} className="text-[#A88C65]" />
             <span className="text-lg text-white font-medium">{SITE_CONTENT.contact.phone}</span>
-          </div>
+          </a>
         </div>
       </div>
     </>

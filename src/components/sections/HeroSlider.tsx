@@ -58,12 +58,14 @@ export const HeroSlider = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-6 pt-4">
-                            <Button variant="primary" className="flex items-center justify-center gap-3">
-                                {SITE_CONTENT.hero.cta}
-                                <ArrowRight size={18}/>
-                            </Button>
-                            <a href="#portfolio">
-                                <Button variant="outline">
+                            <a href="#contact">
+                                <Button variant="primary" className="w-full flex items-center justify-center gap-3">
+                                    {SITE_CONTENT.hero.cta}
+                                    <ArrowRight size={18}/>
+                                </Button>
+                            </a>
+                            <a href="#portfolio" className="w-full sm:w-auto">
+                                <Button variant="outline" className="w-full flex items-center justify-center gap-3">
                                     Portofoliu Proiecte
                                 </Button>
                             </a>

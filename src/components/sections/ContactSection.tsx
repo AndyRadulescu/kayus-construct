@@ -21,25 +21,31 @@ export const ContactSection = () => {
             </p>
 
             <div className="space-y-8">
-              <div className="flex items-center gap-6 group">
+              <a 
+                href={`tel:${SITE_CONTENT.contact.phone.replace(/[^0-9+]/g, '')}`}
+                className="flex items-center gap-6 group hover:translate-x-2 transition-transform duration-300"
+              >
                 <div className="h-12 w-12 bg-zinc-900 border border-zinc-800 rounded-sm flex items-center justify-center group-hover:border-[#FFDA9A] transition-colors">
                   <Phone size={20} className="text-[#FFDA9A]" />
                 </div>
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-widest mb-1">Telefon</p>
-                  <p className="text-white font-bold">{SITE_CONTENT.contact.phone}</p>
+                  <p className="text-white font-bold group-hover:text-[#FFDA9A] transition-colors">{SITE_CONTENT.contact.phone}</p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-center gap-6 group">
+              <a 
+                href={`mailto:${SITE_CONTENT.contact.email}`}
+                className="flex items-center gap-6 group hover:translate-x-2 transition-transform duration-300"
+              >
                 <div className="h-12 w-12 bg-zinc-900 border border-zinc-800 rounded-sm flex items-center justify-center group-hover:border-[#FFDA9A] transition-colors">
                   <Mail size={20} className="text-[#FFDA9A]" />
                 </div>
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-widest mb-1">Email</p>
-                  <p className="text-white font-bold">{SITE_CONTENT.contact.email}</p>
+                  <p className="text-white font-bold group-hover:text-[#FFDA9A] transition-colors">{SITE_CONTENT.contact.email}</p>
                 </div>
-              </div>
+              </a>
 
               <div className="flex items-center gap-6 group">
                 <div className="h-12 w-12 bg-zinc-900 border border-zinc-800 rounded-sm flex items-center justify-center group-hover:border-[#FFDA9A] transition-colors">

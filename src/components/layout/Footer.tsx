@@ -48,13 +48,23 @@ export const Footer = () => {
                     <div className="space-y-6">
                         <h4 className="text-white font-bold uppercase tracking-widest text-sm">Contact</h4>
                         <ul className="space-y-3">
-                            <li className="flex items-center gap-4">
-                                <Phone size={16} className="text-gold"/>
-                                <span className="text-white/50 text-sm">{SITE_CONTENT.contact.phone}</span>
+                            <li className="flex items-center gap-4 group">
+                                <Phone size={16} className="text-gold group-hover:scale-110 transition-transform"/>
+                                <a 
+                                    href={`tel:${SITE_CONTENT.contact.phone.replace(/[^0-9+]/g, '')}`}
+                                    className="text-white/50 hover:text-gold text-sm transition-colors"
+                                >
+                                    {SITE_CONTENT.contact.phone}
+                                </a>
                             </li>
-                            <li className="flex items-center gap-4">
-                                <Mail size={16} className="text-gold"/>
-                                <span className="text-white/50 text-sm">{SITE_CONTENT.contact.email}</span>
+                            <li className="flex items-center gap-4 group">
+                                <Mail size={16} className="text-gold group-hover:scale-110 transition-transform"/>
+                                <a 
+                                    href={`mailto:${SITE_CONTENT.contact.email}`}
+                                    className="text-white/50 hover:text-gold text-sm transition-colors"
+                                >
+                                    {SITE_CONTENT.contact.email}
+                                </a>
                             </li>
                             <li className="flex items-center gap-4">
                                 <MapPin size={16} className="text-gold"/>
